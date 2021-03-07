@@ -2,6 +2,8 @@ package com.demo;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Arrays;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,13 +22,30 @@ public class LoginServlet extends HttpServlet{
 			rd.forward(request, response);
 			
 		}
+		else {
+			PrintWriter writer = response.getWriter();
+			writer.print("incorreect username or password");
+			RequestDispatcher rd = request.getRequestDispatcher("index.html");
+			rd.include(request, response);
+		}
+		
 	}
 	
 	private boolean validateCredentails(String userName , String password) {
-		if(userName.equalsIgnoreCase("chandu") && password.equalsIgnoreCase("chandu")) {
+		if(getUserNameList().contains(userName) && getUserPassWordList().contains(password)) {
 			return true;
 		}
 		return false;
+	}
+	
+	private List<String> getUserNameList(){
+		return Arrays.asList("Chandu","Pavan","Vinod");
+		
+	}
+	
+	private List<String> getUserPassWordList(){
+		return Arrays.asList("Chandu","Pavan","Vinod");
+		
 	}
 
 }

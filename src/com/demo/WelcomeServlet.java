@@ -13,6 +13,7 @@ public class WelcomeServlet extends HttpServlet{
 	public void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 		PrintWriter writer =response.getWriter();
-		writer.println("<h1>welcome back to webapp training</h1>");
+		String userName = request.getParameter("userName");
+		writer.println("<h1>"+userName +" welcome back to webapp training</h1>");
 	}
 }

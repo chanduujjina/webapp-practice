@@ -23,3 +23,8 @@ Request dispatching from UI to server and fetching response fromserver and bind 
 Server side scripting (servlet api,web.xml)
 client side scripting (Html 5,Jquery,Javacript,ajax,axios)
 
+SendRedirect
+
+MockService
+
+List of employees

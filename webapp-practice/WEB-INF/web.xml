@@ -49,5 +49,26 @@
   <url-pattern>/welcome1</url-pattern>
  </servlet-mapping>
  
+   <servlet>
+ <servlet-name>search</servlet-name>
+ <servlet-class>com.demo.SerachServlet</servlet-class>
+ </servlet>
+ 
+  
+   <servlet-mapping>
+  <servlet-name>search</servlet-name>
+  <url-pattern>/search</url-pattern>
+ </servlet-mapping>
+ 
+ 
+    <servlet>
+ <servlet-name>searchEmp</servlet-name>
+ <servlet-class>com.demo.EmployeeInfoServlet</servlet-class>
+ </servlet>
+ 
+    <servlet-mapping>
+  <servlet-name>searchEmp</servlet-name>
+  <url-pattern>/searchEmp</url-pattern>
+ </servlet-mapping>
  
 </web-app>
